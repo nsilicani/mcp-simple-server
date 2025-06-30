@@ -8,6 +8,7 @@ from mcp.types import TextContent
 from mcp.client.stdio import stdio_client
 
 
+
 async def echo_message(message: str, transform: Optional[str] = None) -> str:
     """
     Send a message to the echo server and get the response.

@@ -29,3 +29,12 @@ mcp_simple_server-client = "mcp_simple_server.client.app:main"
 where = ["."]
 include = ["mcp_simple_server*"]
 namespaces = false 
+
+[dependency-groups]
+dev = [
+    "ruff>=0.12.1",
+]
+
+[tool.ruff]
+# Set the maximum line length to 79.
+line-length = 79

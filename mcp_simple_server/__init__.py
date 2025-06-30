@@ -8,6 +8,7 @@ from mcp_simple_server.server.app import server, create_mcp_server
 __version__ = "0.1.0"
 __all__ = ["server", "create_mcp_server"]
 
+
 def main(transport: str = "stdio"):
     """Entry point for MCP server
 
@@ -26,5 +27,6 @@ def main(transport: str = "stdio"):
         logger.error(f"Failed to start MCP server: {e}", exc_info=True)
         sys.exit(1)
 
+
 if __name__ == "__main__":
-    main() 
+    main()

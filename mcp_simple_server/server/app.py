@@ -16,10 +16,10 @@ def create_mcp_server(config: Optional[ServerConfig] = None) -> FastMCP:
     """Create and configure the MCP server instance"""
     if config is None:
         config = load_config()
-    
+
     # Set up logging first
     setup_logging(config)
-    
+
     server = FastMCP(config.name)
 
     # Register all tools with the server
@@ -35,7 +35,9 @@ def register_tools(mcp_server: FastMCP) -> None:
         name="echo",
         description="Echo back the input text with optional case transformation",
     )
-    def echo_tool(text: str, transform: Optional[str] = None) -> types.TextContent:
+    def echo_tool(
+        text: str, transform: Optional[str] = None
+    ) -> types.TextContent:
         """Wrapper around the echo tool implementation"""
         return echo(text, transform)
 
