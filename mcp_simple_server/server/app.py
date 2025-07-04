@@ -61,7 +61,7 @@ def main(port: int, transport: str) -> int:
             asyncio.run(server.run_stdio_async())
         else:
             server.settings.port = port
-            asyncio.run(server.run_sse_async())
+            server.run(transport="streamable-http")
         return 0
     except KeyboardInterrupt:
         logger.info("Server stopped by user")
