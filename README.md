@@ -88,6 +88,7 @@ This MCP server provides two entry points:
    # Run with SSE transport
    mcp_simple_server-server --transport sse
    ```
+   When running with SSE transport, you can ping server also with curl. Please see [this script](mcp_simple_server\scripts\send_requests.py).
 
 ## Logging
 
