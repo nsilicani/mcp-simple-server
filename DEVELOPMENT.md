@@ -31,12 +31,8 @@ This guide will help you get started with developing your own MCP server using t
 
    # Test with SSE transport
    mcp_simple_server-server --transport sse --port 3001 &  # Start server in background; On Windows PowerShell: Start-Process "mcp_simple_server-server" -ArgumentList "--transport sse --port 3001"
-   # Wait a moment for the server to start, then:
-   curl -s -N http://localhost:3001/tools/echo -X POST -H "Content-Type: application/json" -d '{"text": "Hello SSE"}'
-   # The output will be an SSE stream. Look for a data event like:
-   # data: {"type":"text","text":"Hello SSE","format":"text/plain"}
-   # Then, kill the background server job (e.g., 'kill %1' or 'fg' then Ctrl+C)
    ```
+   Please see [this script](mcp_simple_server\scripts\send_requests.py).
 
 ## Project Structure
 
